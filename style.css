@@ -1,0 +1,20 @@
+body {
+    /* Wallpaper Pemandangan Fantasy Anime SAO */
+    background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1920');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Efek Kaca Blur (Glassmorphism) yang Lebih Transparan & Estetik */
+.glass-panel {
+    background: rgba(8, 12, 22, 0.55);
+    /* Lebih transparan */
+    backdrop-filter: blur(16px);
+    /* Efek blur glass yang kuat */
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.sao-clip {
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}

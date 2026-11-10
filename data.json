@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Isoplus Poster",
+        "img": "img/isoplus.jpg",
+        "category": "portrait"
+    },
+    {
+        "title": "Kemasan Permen",
+        "img": "img/kemasan.jpg",
+        "category": "portrait"
+    },
+    {
+        "title": "Concert Poster",
+        "img": "img/poster(potrait).jpg",
+        "category": "portrait"
+    },
+    {
+        "title": "Concert Poster",
+        "img": "img/poster.jpg",
+        "category": "landscape"
+    },
+    {
+        "title": "Logo Dooa Shop",
+        "img": "img/dooa shop.jpg",
+        "category": "landscape"
+    },
+    {
+        "title": "Soccer Logo",
+        "img": "img/soccer.jpg",
+        "category": "landscape"
+    },
+    {
+        "title": "Sho Logo",
+        "img": "img/logo sho.jpg",
+        "category": "landscape"
+    }
+]
