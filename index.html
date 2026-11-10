@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAO // Fantasy Gallery</title>
+    <!-- Google Fonts: Orbitron & Rajdhani -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwindConfig.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-sky-100 font-rajdhani min-h-screen p-4 md:p-8 flex items-center justify-center">
+
+    <!-- Container Utama dengan Glassmorphism Transparan & Blur -->
+    <div class="max-w-6xl w-full mx-auto border-2 border-saoBorder glass-panel shadow-[0_0_35px_rgba(0,210,255,0.4)] sao-clip p-6 md:p-10 relative">
+        
+        <!-- Header -->
+        <header class="text-center mb-8 border-b-2 border-dashed border-saoBorder pb-6">
+            <h1 class="font-orbitron text-3xl md:text-5xl font-black text-white tracking-widest drop-shadow-[0_0_15px_#00d2ff]">
+                Gallery Design
+            </h1>
+            <p class="text-sky-300 font-semibold tracking-wider text-sm md:text-base mt-2 drop-shadow">
+                FANTASY WORLD ARCHIVE
+            </p>
+        </header>
+
+        <!-- Tombol Filter Kategori (ALL, PORTRAIT, LANDSCAPE) -->
+        <div class="flex flex-wrap justify-center gap-3 mb-8 font-orbitron text-xs categoryBtn">
+            <button class="filter-btn px-6 py-2.5 border border-saoBorder bg-saoBorder text-black font-bold transition-all duration-300 hover:shadow-[0_0_15px_#00d2ff]" data-filter="all">ALL</button>
+            <button class="filter-btn px-6 py-2.5 border border-saoBorder bg-transparent text-saoBorder hover:bg-saoBorder hover:text-black transition-all duration-300" data-filter="portrait">PORTRAIT</button>
+            <button class="filter-btn px-6 py-2.5 border border-saoBorder bg-transparent text-saoBorder hover:bg-saoBorder hover:text-black transition-all duration-300" data-filter="landscape">LANDSCAPE</button>
+        </div>
+
+        <!-- Grid Galeri Foto -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="galleryGrid">
+            
+            <!-- Item 1 (Landscape) -->
+            <div class="gallery-item group bg-slate-950/60 border border-saoBorder overflow-hidden cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_20px_#00d2ff] hover:border-white backdrop-blur-sm" 
+                 data-category="landscape"
+                 onclick="openModal('https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1000', 'Aincrad Floating Castle')">
+                <div class="overflow-hidden h-52">
+                    <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500" alt="Aincrad" class="w-full h-full object-cover border-b border-saoBorder transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="p-4">
+                    <h3 class="font-orbitron text-lg font-bold text-white group-hover:text-saoBorder transition-colors">Aincrad Floating Castle</h3>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-xs font-orbitron text-sky-300/70">
+            SEPTIAN PATURAHMAN &bull; GALLERY WEB DESIGN SAO THEME (DIBANTU AI GEMINI)
+        </footer>
+    </div>
+
+    <!-- Modal Pop-up Preview -->
+    <div id="photoModal" class="fixed inset-0 bg-slate-950/80 z-50 hidden items-center justify-center p-4 backdrop-blur-md" onclick="closeModal()">
+        <div class="glass-panel border-2 border-saoBorder max-w-2xl w-full p-6 shadow-[0_0_40px_#00d2ff] relative" onclick="event.stopPropagation()">
+            <button onclick="closeModal()" class="absolute top-1 right-2 font-orbitron text-red-400 hover:text-white font-bold text-sm transition-colors">[CLOSE &times;]</button>
+            <img id="modalImg" src="" alt="" class="w-full max-h-[60vh] object-contain border border-saoBorder mb-4">
+            <h2 id="modalTitle" class="font-orbitron text-xl font-bold text-white mb-2"></h2>
+            <p id="modalDesc" class="text-sm text-sky-200"></p>
+        </div>
+    </div>
+
+    <!-- Script Interaktif -->
+    <script src="gallery.js"></script>
+</body>
+</html>
